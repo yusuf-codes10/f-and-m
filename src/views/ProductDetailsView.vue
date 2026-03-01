@@ -20,6 +20,7 @@ console.log(slug)
 
 // importing the pinia store
 import { productsStore } from '@/stores/productStore'
+import AccordionComp from '@/components/AccordionComp.vue';
 
 // we have to set the store
 const myStore = productsStore()
@@ -77,6 +78,9 @@ const product = computed(() => {
         <p class="product-discription">{{ product.description }}</p>
         <h3>${{ product.price }}.00</h3>
         <button>Add to Cart</button>
+        <AccordionComp :title="'Heel Height'" />
+        <AccordionComp  :title="'Colors'"/>
+        <AccordionComp :title="'Shoe size'"/>
       </div>
       <!-- TODO: have to build accorsion component for more details -->
     </div>
