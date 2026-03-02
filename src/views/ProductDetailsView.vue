@@ -79,11 +79,11 @@ const product = computed(() => {
         <h3>${{ product.price }}.00</h3>
         <button>Add to Cart</button>
         <AccordionComp :title="'Quantity'" >
+          <!-- TODO: we better use computed property to not get out of stock -->
           <input type="number" min="1" value="1" />
         </AccordionComp>
         <AccordionComp  :title="'Colors'"/>
         <AccordionComp :title="'Shoe size'"/>
-        <!-- TODO: we need to handle this one better, more dynamic and stock and everything else option -->
       </div>
 
     </div>
