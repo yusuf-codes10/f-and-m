@@ -105,7 +105,7 @@ watch(quantity, (newVal) => {
         <button>Add to Cart</button>
         <AccordionComp :title="'Quantity'">
           <!-- TODO: we better use computed property to not get out of stock -->
-          <input type="number" min="1" :max="product.stock" v-model="quantity" :class="{ errorInput: showError }" />
+          <input type="number" min="1" :max="product.stock + 1" v-model="quantity" :class="{ errorInput: showError }" />
           <p v-if="showError" class="errorInput">
             Only {{ product.stock }} available!!!
           </p>
