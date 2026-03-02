@@ -110,7 +110,9 @@ watch(quantity, (newVal) => {
             Only {{ product.stock }} available!!!
           </p>
         </AccordionComp>
-        <AccordionComp :title="'Colors'" />
+        <AccordionComp :title="'Colors'">
+          <!-- we going to use an array of images here -->
+        </AccordionComp>
         <AccordionComp :title="'Shoe size'" />
       </div>
     </div>
