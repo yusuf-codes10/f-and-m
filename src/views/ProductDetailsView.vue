@@ -52,6 +52,7 @@ const product = computed(() => {
 
 // * handle the quantity vs stock
 const quantity = ref(1)
+const showError = ref(false)
 // const computedQuantity = computed(() => {
 //   if (quantity.value > product.value.stock) console.log('out of stock');
 //   return 1}
