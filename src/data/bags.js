@@ -19,6 +19,12 @@ const bags = [
     category: 'bag',
     // this is how many physical product are avilable
     stock: 5,
+
+    coloredPreview: [
+      { id: 1, url: '/images/hot-chick-bianco.jpg' },
+      { id: 2, url: '/images/hot-chick-black.jpg' },
+      { id: 3, url: '/images/hot-chick-blush.jpg' },
+    ],
   },
   {
     id: 2,
@@ -39,6 +45,12 @@ const bags = [
     category: 'bag',
     // this is how many physical product are avilable
     stock: 5,
+
+    coloredPreview: [
+      { id: 1, url: '/images/hot-chick-bianco.jpg' },
+      { id: 2, url: '/images/hot-chick-black.jpg' },
+      { id: 3, url: '/images/hot-chick-blush.jpg' },
+    ],
   },
   {
     id: 3,
@@ -59,6 +71,12 @@ const bags = [
     category: 'bag',
     // this is how many physical product are avilable
     stock: 5,
+
+    coloredPreview: [
+      { id: 1, url: '/images/hot-chick-bianco.jpg' },
+      { id: 2, url: '/images/hot-chick-black.jpg' },
+      { id: 3, url: '/images/hot-chick-blush.jpg' },
+    ],
   },
 ]
 
