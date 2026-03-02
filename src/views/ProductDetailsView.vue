@@ -65,11 +65,6 @@ watch(quantity, (newVal) => {
   if (newVal > stock) {
     console.log('out of stock')
     showError.value = true
-
-    // auto hide the popup
-    setTimeout(() => {
-      showError.value = false
-    }, 2000)
   } else {
     showError.value = false
   }
@@ -77,6 +72,7 @@ watch(quantity, (newVal) => {
 
 // conditional rendering for having colors or not
 const hasColors = ref(false)
+
 </script>
 <template>
   <div class="details">
