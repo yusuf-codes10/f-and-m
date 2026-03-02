@@ -71,8 +71,6 @@ watch(quantity, (newVal) => {
 })
 
 // conditional rendering for having colors or not
-const hasColors = ref(false)
-
 </script>
 <template>
   <div class="details">
@@ -113,7 +111,7 @@ const hasColors = ref(false)
           />
           <p v-if="showError" class="errorPopup">Only {{ product.stock }} available!!!</p>
         </AccordionComp>
-        <AccordionComp :title="'Colors'" v-if="hasColors">
+        <AccordionComp :title="'Colors'" v-if="m.availableColors.length > 1">
           <!-- we going to use an array of images here -->
           <div class="img-gallery-colors">
             <img
