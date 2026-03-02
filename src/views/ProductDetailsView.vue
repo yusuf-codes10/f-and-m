@@ -52,7 +52,7 @@ const product = computed(() => {
 
 // * handle the quantity vs stock
 const quantity = ref(1)
-const showError = ref(false)
+const showError = ref(true)
 // const computedQuantity = computed(() => {
 //   if (quantity.value > product.value.stock) console.log('out of stock');
 //   return 1}
@@ -102,6 +102,9 @@ watch(quantity, (newVal) => {
         <AccordionComp :title="'Quantity'">
           <!-- TODO: we better use computed property to not get out of stock -->
           <input type="number" min="1" :max="product.stock" v-model="quantity" :class="{ errorInput: showError }" />
+          <p v-if="showError" class="errorInput">
+            Only {{ product.stock }} available!!!
+          </p>
         </AccordionComp>
         <AccordionComp :title="'Colors'" />
         <AccordionComp :title="'Shoe size'" />
