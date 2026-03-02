@@ -183,11 +183,13 @@ p {
   opacity: 1 !important;
   transition: 0.3s;
 }
+
+input {
+  margin-left: 10%;
+  padding: 0.5rem 1rem;
+  outline: var(--brand-color);
+  width: 80%; /* same width as hr */
+  font-size: 1.3rem;
+
+}
 </style>
-
-<!-- TODO optimization: use computed property instead of the called function -->
-<!-- TODO: clickable image gallery for preview -->
-<!-- TODO: more details for the product-->
-
-
-<!-- TODO: right now this view handles only the women shoes I have to make it handle the other products -->
