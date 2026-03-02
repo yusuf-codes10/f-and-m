@@ -20,7 +20,7 @@ console.log(slug)
 
 // importing the pinia store
 import { productsStore } from '@/stores/productStore'
-import AccordionComp from '@/components/AccordionComp.vue';
+import AccordionComp from '@/components/AccordionComp.vue'
 
 // we have to set the store
 const myStore = productsStore()
@@ -40,7 +40,7 @@ const switchPreview = (img) => {
 // best approach is to merge the two array in a computed property
 const product = computed(() => {
   const allProducts = [...myStore.bags, ...myStore.shoes]
-  return allProducts.find(el => el.slug === slug)
+  return allProducts.find((el) => el.slug === slug)
 })
 
 // properties for img opacity
@@ -57,15 +57,15 @@ const showError = ref(false)
 //   if (quantity.value > product.value.stock) console.log('out of stock');
 //   return 1}
 // )
-watch(quantity, newVal => {
+watch(quantity, (newVal) => {
   if (newVal > product.value.stock) {
-    console.log('out of stock');
+    console.log('out of stock')
     showError.value = true
 
     // auto hide the popup
     setTimeout(() => {
       showError.value = false
-    }, 2000);
+    }, 2000)
   } else {
     showError.value = false
   }
@@ -99,14 +99,13 @@ watch(quantity, newVal => {
         <p class="product-discription">{{ product.description }}</p>
         <h3>${{ product.price }}.00</h3>
         <button>Add to Cart</button>
-        <AccordionComp :title="'Quantity'" >
+        <AccordionComp :title="'Quantity'">
           <!-- TODO: we better use computed property to not get out of stock -->
-          <input type="number" min="1" v-model="quantity" />
+          <input type="number" min="1" :max="product.stock" v-model="quantity" :class="{ errorInput: showError }" />
         </AccordionComp>
-        <AccordionComp  :title="'Colors'"/>
-        <AccordionComp :title="'Shoe size'"/>
+        <AccordionComp :title="'Colors'" />
+        <AccordionComp :title="'Shoe size'" />
       </div>
-
     </div>
   </div>
 </template>
@@ -211,6 +210,5 @@ input {
   outline: var(--brand-color);
   width: 80%; /* same width as hr */
   font-size: 1.3rem;
-
 }
 </style>
