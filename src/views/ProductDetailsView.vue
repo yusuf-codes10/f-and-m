@@ -60,6 +60,14 @@ const showError = ref(false)
 watch(quantity, newVal => {
   if (newVal > product.value.stock) {
     console.log('out of stock');
+    showError.value = true
+
+    // auto hide the popup
+    setTimeout(() => {
+      showError.value = false
+    }, 2000);
+  } else {
+    showError.value = false
   }
 })
 </script>
