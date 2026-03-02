@@ -119,8 +119,8 @@ watch(quantity, (newVal) => {
           <div class="img-gallery">
             <img
               v-for="m in product.coloredPreview"
-              :key="m.coloredPreview.id"
-              :src="m.coloredPreview.url"
+              :key="m.id"
+              :src="m.url"
               alt="m.id"
             />
           </div>
