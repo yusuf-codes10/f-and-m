@@ -52,13 +52,17 @@ const product = computed(() => {
 
 // * handle the quantity vs stock
 const quantity = ref(1)
-const showError = ref(true)
+const showError = ref(false)
 // const computedQuantity = computed(() => {
 //   if (quantity.value > product.value.stock) console.log('out of stock');
 //   return 1}
 // )
 watch(quantity, (newVal) => {
-  if (newVal > product.value.stock) {
+  if (!product.value) return
+
+  const stock = product.value.stock
+
+  if (newVal > stock) {
     console.log('out of stock')
     showError.value = true
 
@@ -213,5 +217,18 @@ input {
   outline: var(--brand-color);
   width: 80%; /* same width as hr */
   font-size: 1.3rem;
+}
+
+/* * minimal styling for the popup */
+.errorInput {
+  border: 2px solid red;
+  background-color: #ffe6e6;
+}
+
+.errorPopup {
+  margin-left: 10%;
+  margin-top: 0.5rem;
+  color: red;
+  font-weight: 600;
 }
 </style>
