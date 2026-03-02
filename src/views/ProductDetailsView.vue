@@ -250,12 +250,14 @@ input {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: .25rem;
+  width: 80%;
+  margin-left: 10%;
 }
 
 .img-gallery-colors  img {
-  width: 80px;
+  width: 100px;
   height: 100px;
   object-fit: contain;
+  cursor: pointer;
 }
 </style>
