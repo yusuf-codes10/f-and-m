@@ -11,6 +11,10 @@ defineProps({
   title: {
     type: String,
     default: 'jake'
+  },
+  content: {
+    type: Object,
+    required: true
   }
 })
 </script>
