@@ -12,10 +12,6 @@ defineProps({
     type: String,
     default: 'jake'
   },
-  content: {
-    type: Object,
-    required: true
-  }
 })
 </script>
 <template>
@@ -28,6 +24,7 @@ defineProps({
     </div>
     <transition name="accordion-content">
       <div class="accordion-content" v-if="isOpen">
+        <slot></slot>
       </div>
     </transition>
     <hr />
