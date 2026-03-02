@@ -9,7 +9,7 @@
 // console.log(route.params.slug)
 
 // now lets's pass it as an arg
-import { defineProps, ref, computed } from 'vue'
+import { defineProps, ref, computed, watch } from 'vue'
 const { slug } = defineProps({
   slug: {
     type: String,
@@ -52,10 +52,15 @@ const product = computed(() => {
 
 // * handle the quantity vs stock
 const quantity = ref(1)
-const computedQuantity = computed(() => {
-  if (quantity.value > product.value.stock) console.log('out of stock');
-  return 1}
-)
+// const computedQuantity = computed(() => {
+//   if (quantity.value > product.value.stock) console.log('out of stock');
+//   return 1}
+// )
+const watchedQty = watch(quantity, newVal => {
+  if (newVal > quantity.value.stock) {
+    console.log('out of stock');
+  }
+})
 </script>
 <template>
   <div class="details">
