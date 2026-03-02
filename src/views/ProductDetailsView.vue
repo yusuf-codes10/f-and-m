@@ -56,8 +56,8 @@ const quantity = ref(1)
 //   if (quantity.value > product.value.stock) console.log('out of stock');
 //   return 1}
 // )
-const watchedQty = watch(quantity, newVal => {
-  if (newVal > quantity.value.stock) {
+watch(quantity, newVal => {
+  if (newVal > product.value.stock) {
     console.log('out of stock');
   }
 })
@@ -92,7 +92,7 @@ const watchedQty = watch(quantity, newVal => {
         <button>Add to Cart</button>
         <AccordionComp :title="'Quantity'" >
           <!-- TODO: we better use computed property to not get out of stock -->
-          <input type="number" min="1" :v-model="computedQuantity" />
+          <input type="number" min="1" v-model="quantity" />
         </AccordionComp>
         <AccordionComp  :title="'Colors'"/>
         <AccordionComp :title="'Shoe size'"/>
