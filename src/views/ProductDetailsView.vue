@@ -116,7 +116,7 @@ watch(quantity, (newVal) => {
         </AccordionComp>
         <AccordionComp :title="'Colors'">
           <!-- we going to use an array of images here -->
-          <div class="img-gallery">
+          <div class="img-gallery-colors">
             <img
               v-for="m in product.coloredPreview"
               :key="m.id"
@@ -244,5 +244,18 @@ input {
   margin-top: 0.5rem;
   color: red;
   font-weight: 600;
+}
+
+.img-gallery-colors {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: .25rem;
+}
+
+.img-gallery-colors  img {
+  width: 80px;
+  height: 100px;
+  object-fit: contain;
 }
 </style>
