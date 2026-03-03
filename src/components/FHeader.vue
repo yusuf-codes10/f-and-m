@@ -33,16 +33,18 @@ const submitSearch = () => {
 
 <template>
   <nav>
-    <RouterLink to="/"
-      ><h2 class="logo"></h2>
-      F&M</RouterLink
-    >
+    <h2 class="logo">
+      <RouterLink to="/"
+      >
+      F&M</RouterLink>
+
+    </h2>
     <ul class="no-mobile">
-      <li><RouterLink :to="{ name: 'Women' }">Women</RouterLink></li>
-      <li><RouterLink :to="{ name: 'Men' }">Men</RouterLink></li>
-      <li><RouterLink :to="{ name: 'Bags' }">Bags & Accesories</RouterLink></li>
+      <li><RouterLink class="a" :to="{ name: 'Women' }">Women</RouterLink></li>
+      <li><RouterLink class="a" :to="{ name: 'Men' }">Men</RouterLink></li>
+      <li><RouterLink class="a" :to="{ name: 'Bags' }">Bags & Accesories</RouterLink></li>
       <!-- <li @click="myStore.toggleFavoriteFilter">Favorites</li> -->
-      <li><RouterLink :to="{ name: 'Favorites' }">Favorites</RouterLink></li>
+      <li><RouterLink class="a" :to="{ name: 'Favorites' }">Favorites</RouterLink></li>
     </ul>
     <div class="btns">
       <div class="search-section">
@@ -81,6 +83,13 @@ nav {
   font-weight: 900;
 }
 
+.logo a {
+  transition: all 0.6s;
+  text-decoration: none;
+  color: var(--brand-color);
+  font-family: inherit;
+}
+
 ul {
   list-style-type: none;
   display: inline-flex;
@@ -88,13 +97,13 @@ ul {
   font-size: 1.2rem;
 }
 
-a {
+.a {
   text-decoration: none;
   color: var(--text-color);
   transition: all 0.6s;
 }
 
-a:hover {
+.a:hover {
   color: var(--brand-color);
 }
 
