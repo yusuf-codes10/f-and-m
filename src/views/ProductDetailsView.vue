@@ -94,8 +94,8 @@ const currentColor = computed(() =>
           <img
             @click="switchPreview(m)"
             v-for="m in currentColor.images"
-            :key="m.id"
-            :src="m.url"
+            :key="m"
+            :src="m"
             alt="m.id"
             :class="{ active: currentImageIndex === m.id - 1 }"
           />
