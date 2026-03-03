@@ -31,8 +31,8 @@ console.log(myStore.shoes)
 
 // * switch preview function
 const currentImageIndex = ref(0)
-const switchPreview = (img) => {
-  currentImageIndex.value = img.id - 1
+const switchPreview = (index) => {
+  currentImageIndex.value = index - 1
   // toggleActiveState()
   console.log(`the id is ${currentImageIndex.value}`)
 }
@@ -92,7 +92,7 @@ const currentColor = computed(() =>
         </div>
         <div class="img-gallery">
           <img
-            @click="switchPreview(m)"
+            @click="switchPreview(index)"
             v-for="(m, index) in currentColor.images"
             :key="index"
             :src="m"
