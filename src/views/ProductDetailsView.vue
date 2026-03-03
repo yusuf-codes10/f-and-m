@@ -32,7 +32,7 @@ console.log(myStore.shoes)
 // * switch preview function
 const currentImageIndex = ref(0)
 const switchPreview = (index) => {
-  currentImageIndex.value = index - 1
+  currentImageIndex.value = index
   // toggleActiveState()
   console.log(`the id is ${currentImageIndex.value}`)
 }
