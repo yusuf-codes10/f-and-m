@@ -78,6 +78,8 @@ const selectedColor = ref(product.value.defaultColor)
 const currentColor = computed(() =>
   product.value.colors.find((c) => c.name === selectedColor.value)
 )
+
+const changeImagePreview = (thing) => console.log(thing);
 </script>
 <template>
   <div class="details">
@@ -129,7 +131,7 @@ const currentColor = computed(() =>
               :key="index"
               :src="color.images[0]"
               alt="color.name"
-              @click="console.log(`you have clicked on ${color.images[0]}`)"
+              @click="changeImagePreview(color.images[0])"
             />
           </div>
         </AccordionComp>
