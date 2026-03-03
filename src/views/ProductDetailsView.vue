@@ -93,11 +93,11 @@ const currentColor = computed(() =>
         <div class="img-gallery">
           <img
             @click="switchPreview(m)"
-            v-for="m in currentColor.images"
-            :key="m"
+            v-for="(m, index) in currentColor.images"
+            :key="index"
             :src="m"
             alt="m.id"
-            :class="{ active: currentImageIndex === m.id - 1 }"
+            :class="{ active: currentImageIndex === index }"
           />
         </div>
       </div>
