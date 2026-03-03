@@ -80,7 +80,9 @@ const currentColor = computed(() =>
   product.value.colors.find((c) => c.name === selectedColor.value)
 )
 
-const changeImagePreview = (thing) => console.log(thing);
+const changeImagePreview = (thing) => {
+  selectedColor.value = thing
+};
 </script>
 <template>
   <div class="details">
