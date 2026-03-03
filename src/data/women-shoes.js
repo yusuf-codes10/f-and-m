@@ -85,17 +85,10 @@ const womenShoes = [
       {
         name: 'black',
         images: [
-          '/images/hot-chick-bianco.jpg',
-          '/images/hot-chick-bianco-profile.jpg',
-          '/images/hot-chick-bianco-back.jpg',
-          '/images/hot-chick-bianco-toebox.jpg',
-        ],
-      },
-      {
-        name: 'blush',
-        images: [
-          '/images/hot-chick-black.jpg',
-          '/images/hot-chick-blush.jpg',
+          '/images/hot-chick-main.jpg',
+          '/images/hot-chick-profile.jpg',
+          '/images/hot-chick-back.jpg',
+          '/images/hot-chick-toebox.jpg',
         ],
       },
       {
@@ -105,6 +98,15 @@ const womenShoes = [
           '/images/hot-chick-bianco-profile.jpg',
           '/images/hot-chick-bianco-back.jpg',
           '/images/hot-chick-bianco-toebox.jpg',
+        ],
+      },
+      {
+        name: 'blush',
+        images: [
+          '/images/hot-chick-blush.jpg',
+          '/images/hot-chick-blush-profile.jpg',
+          '/images/hot-chick-blush-back.jpg',
+          '/images/hot-chick-blush-toebox.jpg',
         ],
       },
     ],

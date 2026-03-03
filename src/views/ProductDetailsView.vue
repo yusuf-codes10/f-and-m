@@ -132,7 +132,7 @@ const changeImagePreview = (thing) => console.log(thing);
               :key="index"
               :src="color.images[0]"
               alt="color.name"
-              @click="changeImagePreview(product.colors.name)"
+              @click="changeImagePreview(color.name)"
             />
           </div>
         </AccordionComp>
