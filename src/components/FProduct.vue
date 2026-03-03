@@ -1,5 +1,5 @@
 <script setup>
-import { defineProps, ref } from 'vue'
+import { defineProps, ref, computed } from 'vue'
 // import shoes from '@/data/women-shoes.js'
 // import { productsStore } from '@/stores/productStore'
 
@@ -25,8 +25,8 @@ const showArrowButton = () => {
 }
 
 // arrow click events
-const nextImage = (product) => {
-  if (currentImageIndex.value < product.preview.length - 1) {
+const nextImage = () => {
+  if (currentImageIndex.value < currentColor.value.images.length - 1) {
     currentImageIndex.value++
   } else {
     currentImageIndex.value = 0
@@ -61,7 +61,7 @@ const currentColor = computed(() =>
 <template>
   <div class="product">
     <div class="preview" @mouseenter="showArrowButton" @mouseleave="showArrowButton">
-      <img :src="product.colors.images[currentImageIndex]" alt="" />
+      <img :src="currentColor?.images[currentImageIndex]" alt="" />
       <!-- <img :src="product.image" :alt="product.title" /> -->
 
       <!-- arrow buttons here that will only show when hovering -->
@@ -69,7 +69,7 @@ const currentColor = computed(() =>
         <i class="fa-solid fa-chevron-left"></i>
       </button>
 
-      <button class="rightBtn" v-show="isShowingArrows" @click="nextImage(product)">
+      <button class="rightBtn" v-show="isShowingArrows" @click="nextImage">
         <i class="fa-solid fa-chevron-right"></i>
       </button>
     </div>
