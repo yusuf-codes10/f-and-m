@@ -122,10 +122,10 @@ const currentColor = computed(() =>
           <!-- we going to use an array of images here -->
           <div class="img-gallery-colors">
             <img
-              v-for="m in product.coloredPreview"
-              :key="m.id"
-              :src="m.url"
-              alt="m.id"
+              v-for="(color, index) in product.colors"
+              :key="index"
+              :src="color.images[0]"
+              alt="color.name"
             />
           </div>
         </AccordionComp>
