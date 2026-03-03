@@ -73,6 +73,11 @@ watch(quantity, (newVal) => {
 // we need current color
 // ! tracking the selected color
 const selectedColor = ref(product.value.defaultColor)
+
+// computed property for the current color, later we will change the color only
+const currentColor = computed(() =>
+  product.value.colors.find(c => c.name === selectedColor.value)
+)
 </script>
 <template>
   <div class="details">
@@ -83,12 +88,12 @@ const selectedColor = ref(product.value.defaultColor)
     <div class="product-preview">
       <div class="images-section">
         <div class="img">
-          <img :src="product.preview[currentImageIndex].url" alt="" />
+          <img :src="currentColor?.images[currentImageIndex]" alt="" />
         </div>
         <div class="img-gallery">
           <img
             @click="switchPreview(m)"
-            v-for="m in product.preview"
+            v-for="m in currentColor.images"
             :key="m.id"
             :src="m.url"
             alt="m.id"
