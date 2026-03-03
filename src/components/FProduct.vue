@@ -33,11 +33,12 @@ const nextImage = () => {
   }
 }
 
+// *fix: we have to fix this
 const previousImage = () => {
-  if (currentImageIndex.value > 0) {
+  if (currentImageIndex.value > 1) {
     currentImageIndex.value--
   } else {
-    currentImageIndex.value = currentColor.value.images.length
+    currentImageIndex.value = currentColor.value.images.length - 1
   }
 }
 
