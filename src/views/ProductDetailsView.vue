@@ -265,3 +265,5 @@ input {
   cursor: pointer;
 }
 </style>
+
+<!-- TODO fixing the data and its functionalities has been done, now we can complete -->
