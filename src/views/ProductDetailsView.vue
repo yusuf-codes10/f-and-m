@@ -70,7 +70,7 @@ watch(quantity, (newVal) => {
   }
 })
 
-// conditional rendering for having colors or not
+const check = m => console.log(`you are ${m}`);
 </script>
 <template>
   <div class="details">
@@ -119,6 +119,7 @@ watch(quantity, (newVal) => {
               :key="m.id"
               :src="m.url"
               alt="m.id"
+              @click="check(m.url)"
             />
           </div>
         </AccordionComp>
