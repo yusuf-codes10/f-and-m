@@ -200,8 +200,10 @@ const womenShoes = [
       {
         name: 'bianco',
         images: [
-          '/images/loubi-queen.jpg',
           '/images/loubi-queen-white.jpg',
+          '/images/loubi-queen-white-profile.jpg',
+          '/images/loubi-queen-white-back.jpg',
+          '/images/loubi-queen-white-toebox.jpg',
         ],
       },
     ],
@@ -236,6 +238,41 @@ const womenShoes = [
           '/images/hot-chick-bianco.jpg',
           '/images/hot-chick-black.jpg',
           '/images/hot-chick-blush.jpg',
+        ],
+      },
+    ],
+  },
+    {
+    id: 7,
+    title: 'Iriza',
+    description: '100 mm Pumps - Patent Calf leather',
+    defaultColor: 'black',
+    for: 'Women',
+    status: 'BestSeller',
+    price: 995,
+    isFavorite: false,
+    slug: 'iriza-100',
+    category: 'women-shoes',
+    stock: 5,
+
+    colors: [
+      {
+        name: 'black',
+        images: [
+          '/images/iriza.jpg',
+          '/images/iriza-profile1.jpg',
+          '/images/iriza-profile2.jpg',
+          '/images/iriza-back.jpg',
+          '/images/iriza-toebox.jpg',
+        ],
+      },
+      {
+        name: 'blush',
+        images: [
+          '/images/iriza-blush.jpg',
+          '/images/iriza-blush-profile1.jpg',
+          '/images/iriza-blush-back.jpg',
+          '/images/iriza-blush-toebox.jpg',
         ],
       },
     ],
