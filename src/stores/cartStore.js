@@ -8,11 +8,17 @@ export const cartStore = defineStore('cart', () => {
     const cartItems = ref([])
 
 
-
+    // * actions
+    const addToCart = () => {
+        console.log('has been added');
+    }
 
 
     return{
         cartItems,
+
+
+        addToCart,
     }
 })
 
