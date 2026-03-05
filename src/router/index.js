@@ -1,5 +1,6 @@
 // this is the router file
 import BagsView from '@/views/BagsView.vue'
+import CartView from '@/views/CartView.vue'
 import FavoriteView from '@/views/FavoriteView.vue'
 import HomeView from '@/views/HomeView.vue'
 import MenView from '@/views/menView.vue'
@@ -54,7 +55,13 @@ const routes = [
     path: '/search',
     name: 'Search',
     component: SearchResultView
-  }
+  },
+  // * the cart route
+  {
+    path: '/cart',
+    name: 'Cart',
+    component: CartView,
+  },
 ]
 
 const router = createRouter({
