@@ -6,10 +6,10 @@ const myStore = productsStore()
 console.log(myStore.shoes)
 
 // import the cart store
-import { cartStore } from "@/stores/cartStore";
+import { cartStore } from '@/stores/cartStore'
 
 const myCartStore = cartStore()
-console.log(myCartStore);
+console.log(myCartStore)
 
 // the ruter for the search
 import { useRouter } from 'vue-router'
@@ -31,7 +31,7 @@ const submitSearch = () => {
   // here we push to the router of search
   route.push({
     name: 'Search',
-    query: { q: searchQuery.value }
+    query: { q: searchQuery.value },
   })
   // TODO: all we need to do is to render the result on the search vue
 }
@@ -40,10 +40,7 @@ const submitSearch = () => {
 <template>
   <nav>
     <h2 class="logo">
-      <RouterLink to="/"
-      >
-      F&M</RouterLink>
-
+      <RouterLink to="/"> F&M</RouterLink>
     </h2>
     <ul class="no-mobile">
       <li><RouterLink class="a" :to="{ name: 'Women' }">Women</RouterLink></li>
@@ -68,9 +65,11 @@ const submitSearch = () => {
       </div>
       <div class="cart-section">
         <button class="cart-btn">
-          <i class="fa-brands fa-opencart"></i>
+          <RouterLink class="a" :to="{ name: 'Cart' }">
+            <i class="fa-brands fa-opencart"></i>
+          </RouterLink>
         </button>
-        <div class="cart-items-number">{{myCartStore.cartItems.length}}</div>
+        <div class="cart-items-number">{{ myCartStore.cartItems.length }}</div>
       </div>
       <button class="hidden">Sign Up</button>
     </div>
@@ -135,13 +134,15 @@ button:hover {
   background-color: var(--brand-hover);
 }
 
-.search-btn, .cart-btn {
+.search-btn,
+.cart-btn {
   background: none;
   color: var(--black);
   transition: all 0.6s;
 }
 
-.search-btn:hover, .cart-btn:hover {
+.search-btn:hover,
+.cart-btn:hover {
   background: none;
   color: var(--brand-color);
 }
@@ -180,7 +181,7 @@ input {
 
   background-color: var(--brand-color);
   color: var(--bg-color);
-  font-size: .7rem;
+  font-size: 0.7rem;
   border-radius: 50%;
   padding: 2px;
 }
