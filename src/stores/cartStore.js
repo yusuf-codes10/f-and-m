@@ -26,7 +26,7 @@ export const cartStore = defineStore('cart', () => {
             } else {
                 // push the product
                 cartItems.value.push({product, quantity: q})
-                console.log(`this is your cart ${cartItems.value[0].product.title} and the qty is ${cartItems.value[0].quantity}`);
+                console.log(`this is your cart ${cartItems.value[cartItems.value.length - 1].product.title} and the qty is ${cartItems.value[0].quantity}`);
             }
         }
 
