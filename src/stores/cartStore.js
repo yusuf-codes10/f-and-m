@@ -15,6 +15,7 @@ export const cartStore = defineStore('cart', () => {
             if (item) {
                 // increase qty
                 item.quantity += q
+                console.log(`this is the item qty ${item.quantity }`);
             } else {
                 // push the product
                 cartItems.value.push({product, quantity: q})
