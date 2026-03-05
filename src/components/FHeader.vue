@@ -66,7 +66,7 @@ const submitSearch = () => {
         </button>
         <div class="cart-items-number">10</div>
       </div>
-      <button>Sign Up</button>
+      <button class="hidden">Sign Up</button>
     </div>
   </nav>
 </template>
