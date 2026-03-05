@@ -60,7 +60,12 @@ const submitSearch = () => {
           @keydown.enter="submitSearch"
         />
       </div>
-      <button>More</button>
+      <div class="cart-section">
+        <button class="cart-btn">
+          <i class="fa-brands fa-opencart"></i>
+        </button>
+      </div>
+      <button>Sign Up</button>
     </div>
   </nav>
 </template>
@@ -123,13 +128,13 @@ button:hover {
   background-color: var(--brand-hover);
 }
 
-.search-btn {
+.search-btn, .cart-btn {
   background: none;
   color: var(--black);
   transition: all 0.6s;
 }
 
-.search-btn:hover {
+.search-btn:hover, .cart-btn:hover {
   background: none;
   color: var(--brand-color);
 }

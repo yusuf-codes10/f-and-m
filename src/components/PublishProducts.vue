@@ -43,6 +43,3 @@ const slicedProducts = computed(() => {
 </template>
 
 <style scoped></style>
-
-
-<!-- TODO this component is not serving anything, we better switch into the women view -->
