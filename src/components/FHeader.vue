@@ -64,6 +64,7 @@ const submitSearch = () => {
         <button class="cart-btn">
           <i class="fa-brands fa-opencart"></i>
         </button>
+        <div class="cart-items-number">10</div>
       </div>
       <button>Sign Up</button>
     </div>
@@ -160,5 +161,21 @@ input {
   z-index: 10;
   /* Optional: Add a simple fade-in */
   transition: opacity 0.3s ease;
+}
+
+.cart-section {
+  position: relative;
+}
+
+.cart-items-number {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  background-color: var(--brand-color);
+  color: var(--bg-color);
+  font-size: .7rem;
+  border-radius: 50%;
+  padding: 2px;
 }
 </style>
