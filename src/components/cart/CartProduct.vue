@@ -37,6 +37,11 @@ const inStock = computed(() => {
       <p>{{ props.item.product.stock }}</p>
 
       <p>{{ props.item.quantity }}</p>
+      <div class="remove-btn">
+        <button>
+            <i class="fa-solid fa-trash-can"></i>
+        </button>
+      </div>
     </div>
     <div class="price">${{ props.item.product.price }}.00</div>
   </div>
@@ -72,5 +77,14 @@ const inStock = computed(() => {
 .price {
   justify-self: flex-end;
   margin-left: auto;
+}
+
+.remove-btn button{
+    background: none;
+    border-radius: 3rem;
+    border-color: var(--brand-color);
+    padding: 4px 8px;
+    font-size: 0.9rem;
+    cursor: pointer;
 }
 </style>
