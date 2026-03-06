@@ -7,7 +7,7 @@ export const cartStore = defineStore('cart', () => {
   const cartItems = ref([])
 
   // * actions
-  const addToCart = (product, q) => {
+  const addToCart = (product, color, q) => {
     // we have to find the product that matches our id again
     const item = cartItems.value.find((obj) => obj.product.id === product.id)
     if (item) {
@@ -22,7 +22,7 @@ export const cartStore = defineStore('cart', () => {
       console.log(`this is the item qty ${item.quantity}`)
     } else {
       // push the product
-      cartItems.value.push({ product, quantity: q })
+      cartItems.value.push({ product, selectedColor:color, quantity: q })
       console.log(
         `this is your cart ${cartItems.value[cartItems.value.length - 1].product.title} and the qty is ${cartItems.value[cartItems.value.length - 1].quantity}`,
       )
