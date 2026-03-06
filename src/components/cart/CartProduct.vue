@@ -18,12 +18,12 @@ console.log(currentColor)
 
 // computed property for inStock
 const inStock = computed(() => {
-    // FIXME: Backend related issue
-    if (props.item.product.stock !==0) {
-        return 'In Stock'
-    } else {
-        return 'Sold Out'
-    }
+  // FIXME: Backend related issue
+  if (props.item.product.stock !== 0) {
+    return 'In Stock'
+  } else {
+    return 'Sold Out'
+  }
 })
 </script>
 <template>
@@ -35,19 +35,18 @@ const inStock = computed(() => {
       <h1 class="title">{{ props.item.product.title }}</h1>
       <p class="inStock">{{ inStock }}</p>
       <p>{{ props.item.product.stock }}</p>
-      
+
       <p>{{ props.item.quantity }}</p>
     </div>
-    <div class="price">
-        ${{ props.item.product.price }}.00
-    </div>
+    <div class="price">${{ props.item.product.price }}.00</div>
   </div>
 </template>
 <style scoped>
 .item {
   background-color: red;
   /* padding: 5rem; */
-  height: 100px;
+  height: 100%;
+  max-height: 200px;
   width: 80%;
   margin: 1rem 0;
   display: flex;
@@ -55,16 +54,23 @@ const inStock = computed(() => {
   gap: 1rem;
 }
 
+.image {
+  width: 20%;
+  aspect-ratio: 1 / 1;
+  flex-shrink: 0;
+}
+
 .image img {
   width: 100%;
   height: 100%;
+  object-fit: contain;
 }
 
 .content {
-    text-align: start;
+  text-align: start;
 }
 .price {
-    justify-self: flex-end;
-    margin-left: auto;
+  justify-self: flex-end;
+  margin-left: auto;
 }
 </style>
