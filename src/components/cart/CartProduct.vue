@@ -22,8 +22,11 @@ console.log(currentColor)
       <img :src="currentColor?.images[0]" :alt="props.item.product.title" />
     </div>
     <div class="content">
-      <h1>{{ props.item.product.title }}</h1>
+      <h1 class="title">{{ props.item.product.title }}</h1>
       <p>{{ props.item.quantity }}</p>
+    </div>
+    <div class="price">
+        ${{ props.item.product.price }}.00
     </div>
   </div>
 </template>
@@ -35,11 +38,20 @@ console.log(currentColor)
   width: 80%;
   margin: 1rem 0;
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
+  gap: 1rem;
 }
 
 .image img {
   width: 100%;
   height: 100%;
+}
+
+.content {
+    text-align: start;
+}
+.price {
+    justify-self: flex-end;
+    margin-left: auto;
 }
 </style>
