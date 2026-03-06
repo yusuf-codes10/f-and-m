@@ -1,6 +1,7 @@
 <script setup>
     import { cartStore } from '@/stores/cartStore'
-import FProduct from '@/components/FProduct.vue'
+// import FProduct from '@/components/FProduct.vue'
+import CartProduct from '@/components/cart/CartProduct.vue';
 
 
     const myCartStore = cartStore()
@@ -11,7 +12,13 @@ import FProduct from '@/components/FProduct.vue'
     This is the cart
     <h3>The products in cart</h3>
     <div class="cart-flex">
-      <FProduct v-for="item in myCartStore.cartItems" :key="item.product.id" :product="item.product" />
+      <!-- <FProduct v-for="item in myCartStore.cartItems" :key="item.product.id" :product="item.product" /> -->
+       <CartProduct />
+       <CartProduct />
+       <CartProduct />
+       <CartProduct />
+
+       
     </div>
   </div>
 </template>
