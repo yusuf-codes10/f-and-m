@@ -15,6 +15,15 @@ const currentColor = computed(() =>
 )
 
 console.log(currentColor)
+
+// computed property for inStock
+const inStock = computed(() => {
+    if (props.item.product.stock !==0) {
+        return 'In Stock'
+    } else {
+        return 'Sold Out'
+    }
+})
 </script>
 <template>
   <div class="item">
@@ -23,6 +32,8 @@ console.log(currentColor)
     </div>
     <div class="content">
       <h1 class="title">{{ props.item.product.title }}</h1>
+      <p class="inStock">{{ inStock }}</p>
+      
       <p>{{ props.item.quantity }}</p>
     </div>
     <div class="price">
