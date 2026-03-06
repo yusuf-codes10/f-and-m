@@ -8,9 +8,9 @@ import FProduct from '@/components/FProduct.vue'
 </script>
 <template>
     <div class="cart-page">
-    This is the cart 
+    This is the cart
     <h3>The products in cart</h3>
-    <div class="products">
+    <div class="cart-flex">
       <FProduct v-for="item in myCartStore.cartItems" :key="item.product.id" :product="item.product" />
     </div>
   </div>
@@ -19,6 +19,11 @@ import FProduct from '@/components/FProduct.vue'
 .cart-page {
   min-height: 100dvh;
   background-color: sienna;
+}
+
+.cart-flex {
+  display: flex;
+  flex-direction: column;
 }
 </style>
 
