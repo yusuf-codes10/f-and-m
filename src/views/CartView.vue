@@ -11,6 +11,9 @@ import CartProduct from '@/components/cart/CartProduct.vue';
     <div class="cart-page">
     This is the cart
     <h3>The products in cart</h3>
+    <div class="subTotal">
+      {{ myCartStore.cartTotolPrice }}
+    </div>
     <div class="cart-flex">
       <!-- <FProduct v-for="item in myCartStore.cartItems" :key="item.product.id" :product="item.product" /> -->
        <CartProduct v-for="item in myCartStore.cartItems" :key="item.product.id" :item="item"/>
