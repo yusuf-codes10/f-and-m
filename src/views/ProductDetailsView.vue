@@ -120,7 +120,7 @@ console.log(myCartStore);
         <h2 class="title">{{ product.title }}</h2>
         <p class="product-discription">{{ product.description }}</p>
         <h3>${{ product.price }}.00</h3>
-        <button @click="myCartStore.addToCart(product, quantity)">Add to Cart</button>
+        <button @click="myCartStore.addToCart(product, selectedColor, quantity)">Add to Cart</button>
         <AccordionComp :title="'Quantity'">
           <!-- TODO: we better use computed property to not get out of stock -->
           <input
