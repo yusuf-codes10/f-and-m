@@ -14,5 +14,8 @@
     .item {
         background-color: red;
         padding: 5rem;
+        height: 100px;
+        width: 100px;
+        margin: 1rem 0;
     }
 </style>

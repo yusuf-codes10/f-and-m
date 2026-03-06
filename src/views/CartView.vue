@@ -14,11 +14,6 @@ import CartProduct from '@/components/cart/CartProduct.vue';
     <div class="cart-flex">
       <!-- <FProduct v-for="item in myCartStore.cartItems" :key="item.product.id" :product="item.product" /> -->
        <CartProduct />
-       <CartProduct />
-       <CartProduct />
-       <CartProduct />
-
-       
     </div>
   </div>
 </template>
