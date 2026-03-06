@@ -36,6 +36,13 @@ export const cartStore = defineStore('cart', () => {
         return cartItems.value.find(obj => obj.product.id === id)
     }
 
+    const deleteItem = () => {
+        // find the item
+
+
+        // delete the item
+    }
+
 
     return{
         cartItems,
