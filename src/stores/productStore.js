@@ -9,7 +9,7 @@ export const productsStore = defineStore('product', () => {
   // * state
   const shoes = ref(womenShoes)
   const bags = ref(womenBags)
-  const menShoes = ref(menShoes)
+  const mShoes = ref(menShoes)
 
   const favoriteFlag = ref(false)
 
@@ -33,13 +33,13 @@ export const productsStore = defineStore('product', () => {
     // show the favorite if the favorite flag is true
     if (favoriteFlag.value) {
       // we filter favorite products
-      return menShoes.value.filter((shoe) => shoe.isFavorite === true)
+      return mShoes.value.filter((shoe) => shoe.isFavorite === true)
     }
-    return menShoes.value
+    return mShoes.value
   })
   // ! this is for the favorite view
   const favoriteProducts = computed(() => {
-    const allProducts = [...shoes.value, ...bags.value, ...menShoes.value]
+    const allProducts = [...shoes.value, ...bags.value, ...mShoes.value]
     const fav = allProducts.filter(prod => prod.isFavorite === true)
     return fav
     })
