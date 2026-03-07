@@ -28,12 +28,16 @@ const inStock = computed(() => {
     return 'Sold Out'
   }
 })
+
+const prviewImg = computed(() => {
+return props.item.product.colors.find(n => n.name === props.item?.selectedColor).images[0]
+})
 </script>
 <template>
   <div class="item">
     <div class="image">
       <!-- this is the issue -->
-      <img :src="item?.selectedColor" :alt="item?.selectedColor" />
+      <img :src="item?.selectedColor" :alt="prviewImg" />
     </div>
     <div class="content">
       <h1 class="title">{{ props.item.product.title }}</h1>
