@@ -32,6 +32,7 @@ const inStock = computed(() => {
 <template>
   <div class="item">
     <div class="image">
+      <!-- this is the issue -->
       <img :src="currentColor?.images[0]" :alt="props.item.product.title" />
     </div>
     <div class="content">
