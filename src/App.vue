@@ -1,6 +1,7 @@
 <script setup>
 import FHeader from './components/FHeader.vue'
 import FFooter from './components/FFooter.vue'
+import SideBar from './components/ui/SideBar.vue';
 // import HomeView from './views/HomeView.vue'
 </script>
 
@@ -11,6 +12,7 @@ import FFooter from './components/FFooter.vue'
   <ProducsContainer />
   <PublishSection /> -->
   <!-- <HomeView /> -->
+   <SideBar />
   <RouterView />
   <FFooter />
   <!--  -->

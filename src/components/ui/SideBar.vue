@@ -1,4 +1,12 @@
 <script setup>
+
+import { defineProps } from 'vue';
+
+defineProps(
+    {
+        open: Boolean,
+    }
+)
 </script>
 
 <template>
