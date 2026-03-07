@@ -73,7 +73,7 @@ watch(quantity, (newVal) => {
 // we need current color
 // ! tracking the selected color
 const selectedColor = ref(product.value.defaultColor)
-console.log(`This is the selected color ${selectedColor.value}`)
+console.log(`This is the selected color ${selectedColor.value}`);
 
 // computed property for the current color, later we will change the color only
 const currentColor = computed(() =>
@@ -82,15 +82,16 @@ const currentColor = computed(() =>
 
 const changeImagePreview = (thing) => {
   selectedColor.value = thing
-}
+};
+
 
 // call the add to cart function here
 
 // import the cart store
-import { cartStore } from '@/stores/cartStore'
+import { cartStore } from "@/stores/cartStore";
 
 const myCartStore = cartStore()
-console.log(myCartStore)
+console.log(myCartStore);
 </script>
 <template>
   <div class="details">
@@ -119,9 +120,7 @@ console.log(myCartStore)
         <h2 class="title">{{ product.title }}</h2>
         <p class="product-discription">{{ product.description }}</p>
         <h3>${{ product.price }}.00</h3>
-        <button @click="myCartStore.addToCart(product, selectedColor, quantity)">
-          Add to Cart
-        </button>
+        <button @click="myCartStore.addToCart(product, selectedColor, quantity)">Add to Cart</button>
         <AccordionComp :title="'Quantity'">
           <!-- TODO: we better use computed property to not get out of stock -->
           <input
@@ -249,11 +248,11 @@ p {
 }
 
 input {
+  margin-left: 10%;
+  padding: 0.5rem 1rem;
   outline: var(--brand-color);
+  width: 80%; /* same width as hr */
   font-size: 1.3rem;
-
-  padding: 0.6rem 1rem;
-  font-size: clamp(1rem, 2vw, 1.3rem);
 }
 
 /* * minimal styling for the popup */
@@ -284,7 +283,7 @@ input {
   cursor: pointer;
 }
 
-@media (max-width: 600px) {
+@media(max-width: 600px) {
   .product-preview {
     display: flex;
     flex-direction: column;
