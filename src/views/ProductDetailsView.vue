@@ -288,5 +288,13 @@ input {
     display: flex;
     flex-direction: column;
   }
+  input, button {
+    width: 100%;
+  }
 }
 </style>
+
+<!-- TODO: handle the color as a saparate item -->
+<!-- TODO: side bar for moile -->
+<!-- TODO:responsive design -->
+
