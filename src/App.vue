@@ -3,6 +3,10 @@ import FHeader from './components/FHeader.vue'
 import FFooter from './components/FFooter.vue'
 import SideBar from './components/ui/SideBar.vue';
 // import HomeView from './views/HomeView.vue'
+
+import sidebarStore from '@/stores/sidebarStore'
+
+const myStore = sidebarStore()
 </script>
 
 <template>
@@ -12,7 +16,7 @@ import SideBar from './components/ui/SideBar.vue';
   <ProducsContainer />
   <PublishSection /> -->
   <!-- <HomeView /> -->
-   <SideBar />
+   <SideBar :open="myStore.isOpen"/>
   <RouterView />
   <FFooter />
   <!--  -->
