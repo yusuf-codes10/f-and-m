@@ -30,14 +30,17 @@ const inStock = computed(() => {
 })
 
 const prviewImg = computed(() => {
-return props.item.product.colors.find(n => n.name === props.item?.selectedColor).images[0]
+  // ! we are finding the name first cuz we have it  props.item.product.colors.find((n) => n.name === props.item?.selectedColor)
+  // it;s passed as a property to the item object as selected color
+  // the we access the 1st image of that
+  return props.item.product.colors.find((n) => n.name === props.item?.selectedColor).images[0]
 })
 </script>
 <template>
   <div class="item">
     <div class="image">
       <!-- this is the issue -->
-      <img :src="item?.selectedColor" :alt="prviewImg" />
+      <img :src="prviewImg" :alt="prviewImg" />
     </div>
     <div class="content">
       <h1 class="title">{{ props.item.product.title }}</h1>
