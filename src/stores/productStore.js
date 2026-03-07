@@ -46,7 +46,7 @@ export const productsStore = defineStore('product', () => {
 
     // * all porducts together
     const allProducts = computed(() => {
-      const products = [...shoes.value, ...bags.value]
+      const products = [...shoes.value, ...bags.value, ...mShoes.value]
       return products
     })
 
