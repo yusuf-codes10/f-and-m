@@ -33,7 +33,7 @@ const inStock = computed(() => {
   <div class="item">
     <div class="image">
       <!-- this is the issue -->
-      <img :src="currentColor?.images[0]" :alt="props.item.product.title" />
+      <img :src="currentColor?.name = myCartStore.colorToPass" :alt="props.item.product.title" />
     </div>
     <div class="content">
       <h1 class="title">{{ props.item.product.title }}</h1>
