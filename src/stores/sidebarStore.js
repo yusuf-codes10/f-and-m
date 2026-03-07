@@ -4,7 +4,7 @@ import {ref} from 'vue'
 
 export const cartStore = defineStore('sidebar', () => {
 
-    const isOpen = ref(false)
+    const isOpen = ref(true)
 
 
 
