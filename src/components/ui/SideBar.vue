@@ -7,6 +7,7 @@
     </div>
 </template>
 <style scoped>
+/* transform & transition instead of the display:none for better animation later */
 .sidebar {
   position: fixed;
   left: 0;
