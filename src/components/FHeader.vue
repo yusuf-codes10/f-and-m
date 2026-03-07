@@ -71,6 +71,9 @@ const submitSearch = () => {
         </button>
         <div class="cart-items-number">{{ myCartStore.cartItems.length }}</div>
       </div>
+      <div class="ham-icon">
+        <i class="fa-solid fa-bars"></i>
+      </div>
       <button class="hidden">Sign Up</button>
     </div>
   </nav>
