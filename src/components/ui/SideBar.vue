@@ -14,7 +14,7 @@ const myStore = sideBarStore()
 </script>
 
 <template>
-    <div class="sidebar" v-show="myStore.isOpen">
+    <div class="sidebar"  :class="{ open: myStore.isOpen }">
         this is the side bar
     </div>
 </template>
