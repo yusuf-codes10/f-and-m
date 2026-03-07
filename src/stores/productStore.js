@@ -29,6 +29,14 @@ export const productsStore = defineStore('product', () => {
     }
     return shoes.value
   })
+    const activeMenFilter = computed(() => {
+    // show the favorite if the favorite flag is true
+    if (favoriteFlag.value) {
+      // we filter favorite products
+      return menShoes.value.filter((shoe) => shoe.isFavorite === true)
+    }
+    return menShoes.value
+  })
   // ! this is for the favorite view
   const favoriteProducts = computed(() => {
     const allProducts = [...shoes.value, ...bags.value, ...menShoes.value]
@@ -52,7 +60,8 @@ export const productsStore = defineStore('product', () => {
 
     // * getters
     activeFilter,
-    allProducts
+    allProducts,
+    activeMenFilter,
   }
 })
 

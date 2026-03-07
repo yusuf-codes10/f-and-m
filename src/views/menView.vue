@@ -6,7 +6,7 @@ import { productsStore } from '@/stores/productStore'
 
 // we have to set the store
 const myStore = productsStore()
-console.log(myStore.shoes)
+console.log(myStore.menShoes)
 
 // import { ref, onMounted } from 'vue'
 
@@ -28,14 +28,14 @@ console.log(myStore.shoes)
 </script>
 
 <template>
-  <div class="products women">
+  <div class="products men">
     <FProduct v-for="shoe in myStore.activeFilter" :key="shoe.id" :product="shoe" />
   </div>
 </template>
 
 <style scoped>
-.women {
+.men {
   min-height: 100dvh;
-  /* background-color: seagreen; */
+  background-color: seagreen;
 }
 </style>
