@@ -35,3 +35,5 @@ const menShoes = [
     ],
   },
 ]
+
+export default menShoes

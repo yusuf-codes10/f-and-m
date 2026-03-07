@@ -2,12 +2,14 @@
 import { defineStore } from 'pinia'
 import womenShoes from '@/data/women-shoes.js'
 import womenBags from '@/data/bags.js'
+import menShoes from '@/data/men-shoes.js'
 import { computed, ref } from 'vue'
 
 export const productsStore = defineStore('product', () => {
   // * state
   const shoes = ref(womenShoes)
   const bags = ref(womenBags)
+  const menShoes = ref(menShoes)
 
   const favoriteFlag = ref(false)
 
@@ -29,7 +31,7 @@ export const productsStore = defineStore('product', () => {
   })
   // ! this is for the favorite view
   const favoriteProducts = computed(() => {
-    const allProducts = [...shoes.value, ...bags.value]
+    const allProducts = [...shoes.value, ...bags.value, ...menShoes.value]
     const fav = allProducts.filter(prod => prod.isFavorite === true)
     return fav
     })
