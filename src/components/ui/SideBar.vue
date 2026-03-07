@@ -22,7 +22,7 @@ const myStore = cartStore()
 /* transform & transition instead of the display:none for better animation later */
 .sidebar {
   position: fixed;
-  left: 0;
+  right: 0;
   top: 0;
   width: 280px;
   height: 100vh;
