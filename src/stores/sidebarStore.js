@@ -6,9 +6,14 @@ export const cartStore = defineStore('sidebar', () => {
 
     const isOpen = ref(false)
 
-
+    // * actions
+    const toggleSideBar = () => {
+        isOpen.value = !isOpen.value
+    }
 
     return {
         isOpen,
+
+        toggleSideBar,
     }
 })
