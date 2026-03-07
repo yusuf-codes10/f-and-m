@@ -282,7 +282,11 @@ input {
   object-fit: contain;
   cursor: pointer;
 }
-</style>
 
-<!-- TODO fixing the data and its functionalities has been done, now we can complete -->
- <!-- ! we need to just switch the currentColor this selectedColor -->
+@media(max-width: 600px) {
+  .product-preview {
+    display: flex;
+    flex-direction: column;
+  }
+}
+</style>
