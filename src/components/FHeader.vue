@@ -76,7 +76,7 @@ const sideStore = sideBarStore()
         <div class="cart-items-number">{{ myCartStore.cartItems.length }}</div>
       </div>
       <div class="ham-icon">
-        <button @click="myStore.tog">
+        <button class="ham-btn" @click="sideStore.toggleSideBar">
 
           <i class="fa-solid fa-bars"></i>
         </button>
@@ -145,14 +145,16 @@ button:hover {
 }
 
 .search-btn,
-.cart-btn {
+.cart-btn,
+.ham-btn {
   background: none;
   color: var(--black);
   transition: all 0.6s;
 }
 
 .search-btn:hover,
-.cart-btn:hover {
+.cart-btn:hover,
+.ham-btn:hover {
   background: none;
   color: var(--brand-color);
 }
