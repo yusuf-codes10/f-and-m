@@ -9,7 +9,9 @@ export const cartStore = defineStore('cart', () => {
   // * actions
   const addToCart = (product, color, q) => {
     // we have to find the product that matches our id again
-    const item = cartItems.value.find((obj) => obj.product.id === product.id)
+    const item = cartItems.value.find((obj) => obj.product.id === product.id
+      && obj.selectedColor === color
+  )
     if (item) {
       // increase qty
       // here we gonna make the item.quantity does not go past the product stock, we have all the data
