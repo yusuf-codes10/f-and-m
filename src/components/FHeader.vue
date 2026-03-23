@@ -198,13 +198,13 @@ input {
   padding: 2px;
 }
 
-.ham-btn {
-  display: none;
+.ham-icon {
+  display: block;
 }
 
 @media(min-width: 768px) {
-  .ham-btn {
-    display: block;
+  .ham-icon {
+    display: none;
   }
 }
 </style>
