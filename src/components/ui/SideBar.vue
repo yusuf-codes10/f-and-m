@@ -16,6 +16,7 @@ const myStore = sideBarStore()
 <template>
     <div class="sidebar"  :class="{ open: myStore.isOpen }">
         this is the side bar
+        <i class="fa-solid fa-xmark"></i>
     </div>
 </template>
 <style scoped>
