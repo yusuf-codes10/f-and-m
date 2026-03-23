@@ -27,7 +27,8 @@ const myStore = sideBarStore()
 
   width: 280px;
   height: 100vh;
-  background-color: red;
+  /* background-color: red; */
+  background-color: var(--bg-color);
 
   transform: translateX(100%); /* push it to the right */
   transition: transform 0.3s ease;
