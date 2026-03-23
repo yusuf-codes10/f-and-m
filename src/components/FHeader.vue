@@ -36,7 +36,7 @@ const submitSearch = () => {
   // TODO: all we need to do is to render the result on the search vue
 }
 
-import {sideBarStore} from '@/stores/sidebarStore.js'
+import { sideBarStore } from '@/stores/sidebarStore.js'
 
 const sideStore = sideBarStore()
 </script>
@@ -46,7 +46,7 @@ const sideStore = sideBarStore()
     <h2 class="logo">
       <RouterLink to="/"> F&M</RouterLink>
     </h2>
-    <ul class="no-mobile">
+    <ul>
       <li><RouterLink class="a" :to="{ name: 'Women' }">Women</RouterLink></li>
       <li><RouterLink class="a" :to="{ name: 'Men' }">Men</RouterLink></li>
       <li><RouterLink class="a" :to="{ name: 'Bags' }">Bags & Accesories</RouterLink></li>
@@ -76,8 +76,7 @@ const sideStore = sideBarStore()
         <div class="cart-items-number">{{ myCartStore.cartItems.length }}</div>
       </div>
       <div class="ham-icon">
-        <button class="ham-btn " @click="sideStore.toggleSideBar">
-
+        <button class="ham-btn" @click="sideStore.toggleSideBar">
           <i class="fa-solid fa-bars"></i>
         </button>
       </div>
@@ -113,8 +112,7 @@ nav {
 
 ul {
   list-style-type: none;
-  display: inline-flex;
-  gap: 1rem;
+  display: none;
   font-size: 1.2rem;
 }
 
@@ -203,9 +201,14 @@ input {
   /* z-index: 50; */
 }
 
-@media(min-width: 768px) {
+@media (min-width: 768px) {
   .ham-icon {
     display: none;
+  }
+
+  ul {
+    display: inline-flex;
+    gap: 1rem;
   }
 }
 </style>
