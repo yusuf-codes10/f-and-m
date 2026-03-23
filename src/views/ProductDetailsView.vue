@@ -185,6 +185,7 @@ console.log(myCartStore);
   display: flex;
   flex-direction: row-reverse;
   gap: 0.5rem;
+  padding: 1rem;
 }
 
 .product-details {
