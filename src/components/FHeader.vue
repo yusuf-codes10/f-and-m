@@ -76,7 +76,7 @@ const sideStore = sideBarStore()
         <div class="cart-items-number">{{ myCartStore.cartItems.length }}</div>
       </div>
       <div class="ham-icon">
-        <button class="ham-btn" @click="sideStore.toggleSideBar">
+        <button class="ham-btn " @click="sideStore.toggleSideBar">
 
           <i class="fa-solid fa-bars"></i>
         </button>
@@ -196,5 +196,15 @@ input {
   font-size: 0.7rem;
   border-radius: 50%;
   padding: 2px;
+}
+
+.ham-btn {
+  display: none;
+}
+
+@media(min-width: 768px) {
+  .ham-btn {
+    display: block;
+  }
 }
 </style>
