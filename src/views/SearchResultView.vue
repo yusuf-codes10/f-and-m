@@ -26,7 +26,7 @@ console.log(myStore.allProducts.map((e) => e.title))
 </script>
 <template>
   <div class="search">
-    <p>Search results for {{ searchQuery }}</p>
+    <h1 class="title">Search results for "{{ searchQuery }}"</h1>
     <div class="result products" v-if="filterdProducts.length">
         <FProduct v-for="product in filterdProducts" :key="product.id" :product="product"/>
     </div>
