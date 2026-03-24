@@ -1,11 +1,10 @@
 <script setup>
-import { ref, onMounted } from 'vue'
+import { ref } from 'vue'
 
 const videoRef = ref(null)
 const isSound = ref(false)
 const isPlaying = ref(true)
 
-const isDesktop = ref(false)
 
 const toggleVideo = () => {
   if (videoRef.value.paused) {
@@ -22,18 +21,12 @@ const toggleSound = () => {
   isSound.value = !videoRef.value.muted
 }
 
-onMounted(() => {
-  if (window.innerWidth >= 655) {
-    isDesktop.value = true
-  }
-})
 </script>
 
 <template>
   <div class="vid-container">
-    <video v-if="isDesktop" ref="videoRef" autoplay muted loop playsinline>
+    <video ref="videoRef" autoplay muted loop playsinline>
       <source src="/videos/hero.mp4" type="video/mp4" />
-      Your browser does not support the video tag.
     </video>
     <div class="hero-section">
       <div class="btn-section no-mobile">
