@@ -71,11 +71,20 @@ import images from '@/data/pub-images.js'
 /* styling the images */
 .images-section {
   display: flex;
+  flex-direction: column;
+  /* justify-content: space-evenly; */
+}
+
+@media (min-width: 768px) {
+  .images-section {
+    flex-direction: row;
   justify-content: space-evenly;
+
+  }
 }
 
 .img-container {
-  width: 20%;
+  width: 100%;
   aspect-ratio: 1 / 1;
   /* margin: 1.5rem; */
 }
@@ -83,7 +92,7 @@ import images from '@/data/pub-images.js'
 .img-container img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
   display: block;
 }
 </style>
