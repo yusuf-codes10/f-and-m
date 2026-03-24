@@ -24,6 +24,5 @@ const myStore = sideBarStore()
 
 <style scoped></style>
 
-<!--TODO 1-more products (men, women in the women view...) -->
-<!--TODO 2- live search feature and syncing with different views -->
-<!--TODO 3- dynamic routes & product details page -->
+<!-- TODO: fix the item cart style and logic -->
+<!-- TODO: add toast notifications -->
