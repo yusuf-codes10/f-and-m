@@ -1,26 +1,24 @@
 <script setup>
-import { productsStore } from '@/stores/productStore'
-
-// we have to set the store
-const myStore = productsStore()
-console.log(myStore.shoes)
-
 // import the cart store
 import { cartStore } from '@/stores/cartStore'
-
-const myCartStore = cartStore()
-console.log(myCartStore)
-
 // the ruter for the search
 import { useRouter } from 'vue-router'
+// search functionality
+import { ref } from 'vue'
+import { sideBarStore } from '@/stores/sidebarStore.js'
+
+
+
+const sideStore = sideBarStore()
+
+const myCartStore = cartStore()
 
 const route = useRouter()
 
-// search functionality
-import { ref } from 'vue'
 const isSearchMode = ref(false)
 
 const searchQuery = ref('')
+
 const toggleSearch = () => {
   isSearchMode.value = !isSearchMode.value
 }
@@ -36,9 +34,6 @@ const submitSearch = () => {
   // TODO: all we need to do is to render the result on the search vue
 }
 
-import { sideBarStore } from '@/stores/sidebarStore.js'
-
-const sideStore = sideBarStore()
 </script>
 
 <template>
