@@ -49,7 +49,7 @@ onMounted(() => {
       </div>
       <div class="cta-section">
         <p>Elegance in Motion</p>
-        <h1>CASSIA COLLECTION</h1>
+        <h1 class="cta-title">CASSIA COLLECTION</h1>
         <div class="discover-btn">
           <button>DISCOVER</button>
         </div>
@@ -97,12 +97,6 @@ video {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-}
-
-.cta-section h1 {
-  font-size: clamp(1.3rem, 4vw + 1rem, 2.8rem);
-  font-weight: 900;
-  color: var(--brand-color);
 }
 
 .cta-section p {

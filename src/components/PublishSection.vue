@@ -11,7 +11,7 @@ import images from '@/data/pub-images.js'
     </div>
     <div class="cta-section">
       <p>New arrivals</p>
-      <h1>LATEST CREATIONS</h1>
+      <h1 class="cta-title">LATEST CREATIONS</h1>
       <div class="discover-btn">
         <button>DISCOVER</button>
       </div>
@@ -21,7 +21,7 @@ import images from '@/data/pub-images.js'
 
 <style scoped>
 .publish {
-  height: 100vh;
+  min-height: 100vh;
   padding: 3rem;
 }
 
@@ -33,13 +33,6 @@ import images from '@/data/pub-images.js'
   flex-direction: column;
   gap: 1rem;
   margin: 3rem 0;
-}
-
-.cta-section h1 {
-  font-size: clamp(1.3rem, 4vw + 1rem, 2.8rem);
-  font-weight: 900;
-  color: var(--brand-color);
-  text-align: center;
 }
 
 .cta-section p {
