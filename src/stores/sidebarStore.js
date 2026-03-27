@@ -10,10 +10,14 @@ export const sideBarStore = defineStore('sidebar', () => {
     const toggleSideBar = () => {
         isOpen.value = !isOpen.value
     }
+    const closeSidebar = () => {
+      isOpen.value = false
+    }
 
     return {
         isOpen,
 
         toggleSideBar,
+        closeSidebar,
     }
 })
